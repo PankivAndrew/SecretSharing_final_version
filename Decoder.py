@@ -1,8 +1,7 @@
 import numpy
 import random
-import work_with_matrix
 import sympy
-
+#Start at 23:15
 class DecodeASecret:
     def __init__(self, vectors, lst_of_teachers):
         self.vectors = vectors
@@ -32,7 +31,7 @@ class DecodeASecret:
                 output += chr(int(k, 2))
         except ValueError:
             import main
-            print("Restarting!")
+            print(" Restarting!")
             main.main()
             quit()
         return output
