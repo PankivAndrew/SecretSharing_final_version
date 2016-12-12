@@ -1,5 +1,7 @@
 import unittest
+
 from main import *
+
 
 class Test(unittest.TestCase):
     def test_1(self):
@@ -28,8 +30,8 @@ class Test(unittest.TestCase):
         self.assertEqual(expected, actual, "Error")
 
     def test_6(self):
-        expected = "959685 858869 9594040 05050600 50404003"
-        actual = main("959685 858869 9594040 05050600 50404003")
+        expected = "zxcvbnm,./"
+        actual = main("zxcvbnm,./")
         self.assertEqual(expected, actual, "Error")
 
     def test_7(self):
@@ -38,8 +40,8 @@ class Test(unittest.TestCase):
         self.assertEqual(expected, actual, "Error")
 
     def test_8(self):
-        expected = "@#$%^&*()_+"
-        actual = main("@#$%^&*()_+")
+        expected = "~~~~~~~~~~"
+        actual = main("~~~~~~~~~~")
         self.assertEqual(expected, actual, "Error")
 
     def test_9(self):

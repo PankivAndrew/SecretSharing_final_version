@@ -22,17 +22,13 @@ class DecodeASecret:
         return code
 
     def output(self, code):
-        try:
-            output = ""
-            for i in range(0, len(code) - 3, 4):
-                k = ''
-                for arg in code[i:i + 4]:
-                    k += str(int(arg[0])) + str(int(arg[1]))
-                output += chr(int(k, 2))
-        except ValueError:
-            import main
-            main.main(main.back_up_secret[0])
-            quit()
+
+        output = ""
+        for i in range(0, len(code) - 3, 4):
+            k = ''
+            for arg in code[i:i + 4]:
+                k += str(int(arg[0])) + str(int(arg[1]))
+            output += chr(int(k, 2))
         return output
 
     def merge(self, matrix, vactor):
